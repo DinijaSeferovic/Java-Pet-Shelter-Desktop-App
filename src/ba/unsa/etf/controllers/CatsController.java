@@ -1,8 +1,7 @@
 package ba.unsa.etf.controllers;
 
 import ba.unsa.etf.ItemButtonListener;
-import ba.unsa.etf.dal.CatDAO;
-import ba.unsa.etf.dal.DogDAO;
+import ba.unsa.etf.dal.PetDAO;
 import ba.unsa.etf.dal.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -23,7 +22,7 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 public class CatsController implements Initializable {
-    private CatDAO dao = CatDAO.getInstance();
+    private PetDAO dao = PetDAO.getInstance();
 
     @FXML
     private ScrollPane scrollCats;
@@ -34,11 +33,11 @@ public class CatsController implements Initializable {
     @FXML
     private GridPane mainGridCats;
 
-    private List<CatDAO> cats = new ArrayList<>();
+    private List<PetDAO> cats = new ArrayList<>();
     private ItemButtonListener myListener;
 
-    private void setHeartedCat(CatDAO cat) {
-        dao.insertLikedCat(cats.stream().filter(c -> c.getId()==cat.getId()).findFirst().get());
+    private void setLikedCat(PetDAO cat) {
+        dao.insertLikedPet(cats.stream().filter(c -> c.getId()==cat.getId()).findFirst().get());
     }
 
     @Override
@@ -49,11 +48,7 @@ public class CatsController implements Initializable {
         if (cats.size() > 0) {
             myListener = new ItemButtonListener() {
                 @Override
-                public void onClickListener(DogDAO dog) {}
-                @Override
-                public void onClickListener(CatDAO cat) {
-                    setHeartedCat(cat);
-                }
+                public void onClickListener(PetDAO cat) { setLikedCat(cat);}
                 @Override
                 public void onClickListener(User user) {}
             };
@@ -68,7 +63,7 @@ public class CatsController implements Initializable {
                 AnchorPane Pane = fxmlLoader.load();
 
                 ItemController itemController = fxmlLoader.getController();
-                itemController.setCatData(cats.get(i), myListener);
+                itemController.setAllPetsData(cats.get(i), myListener);
 
                 if (column == 3) {
                     column = 0;

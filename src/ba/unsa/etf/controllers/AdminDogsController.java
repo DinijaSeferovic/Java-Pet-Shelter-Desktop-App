@@ -1,8 +1,7 @@
 package ba.unsa.etf.controllers;
 
 import ba.unsa.etf.ItemButtonListener;
-import ba.unsa.etf.dal.CatDAO;
-import ba.unsa.etf.dal.DogDAO;
+import ba.unsa.etf.dal.PetDAO;
 import ba.unsa.etf.dal.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -35,26 +34,24 @@ public class AdminDogsController implements Initializable {
 
     public AdminDogsController(){ }
 
-    private List<DogDAO> dogs = new ArrayList<>();
+    private List<PetDAO> dogs = new ArrayList<>();
     private ItemButtonListener myListener;
 
-    private DogDAO dog = DogDAO.getInstance();
+    private PetDAO pet = PetDAO.getInstance();
 
     @Override
     public void initialize(URL location, ResourceBundle resources)  {
 
-        dogs.addAll(dog.getAllDogs());
+        dogs.addAll(pet.getAllDogs());
 
         if (dogs.size() > 0) {
             myListener = new ItemButtonListener() {
                 @Override
-                public void onClickListener(DogDAO d) {
-                    dog.deleteDog(d);
+                public void onClickListener(PetDAO d) {
+                    pet.deletePet(d);
                     gridAdminDogs.getChildren().remove(dogs.indexOf(d));
                     dogs.remove(d);
                 }
-                @Override
-                public void onClickListener(CatDAO cat) {}
                 @Override
                 public void onClickListener(User user) {}
             };
@@ -99,7 +96,7 @@ public class AdminDogsController implements Initializable {
         try {
             Stage newStage = new Stage();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/addpetscreen.fxml"));
-            loader.setController(new AddFormContoller(dog));
+            loader.setController(new AddFormContoller(pet));
             Parent root = loader.load();
             newStage.setTitle("Add a dog");
             newStage.setScene(new Scene(root, 300, 350));

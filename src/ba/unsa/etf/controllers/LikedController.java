@@ -1,9 +1,8 @@
 package ba.unsa.etf.controllers;
 
 import ba.unsa.etf.ItemButtonListener;
-import ba.unsa.etf.dal.CatDAO;
-import ba.unsa.etf.dal.DogDAO;
 import ba.unsa.etf.dal.Pet;
+import ba.unsa.etf.dal.PetDAO;
 import ba.unsa.etf.dal.User;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -30,39 +29,27 @@ public class LikedController implements Initializable {
     @FXML
     private GridPane mainGridLiked;
 
-    private List<Pet> pets = new ArrayList<>();
+    private List<PetDAO> pets = new ArrayList<>();
     private ItemButtonListener myListener;
 
-    private DogDAO dog = DogDAO.getInstance();
-    private CatDAO cat = CatDAO.getInstance();
+    private PetDAO pet = PetDAO.getInstance();
 
-    private void deleteHeartedDog(Pet pet) {
-        dog.deleteLikedDog((DogDAO) pets.stream().filter(d -> d instanceof DogDAO && d.getId()==pet.getId()).findFirst().get());
-    }
-    private void deleteHeartedCat(Pet pet) {
-        cat.deleteLikedCat((CatDAO) pets.stream().filter(c -> c instanceof CatDAO && c.getId() == pet.getId()).findFirst().get());
+    private void deleteLikedPet(Pet pet) {
+        this.pet.deleteLikedPet(pets.stream().filter(d -> d.getId()==pet.getId()).findFirst().get());
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources)  {
 
-        pets.addAll(dog.getLikedDogs());
-        pets.addAll(cat.getLikedCats());
+        pets.addAll(pet.getLikedPets());
 
         if (pets.size() > 0) {
             myListener = new ItemButtonListener() {
                 @Override
-                public void onClickListener(DogDAO dog) {
-                    deleteHeartedDog(dog);
-                    gridLiked.getChildren().remove(pets.indexOf(dog));
-                    pets.remove(dog);
-                }
-                @Override
-                public void onClickListener(CatDAO cat) {
-                    deleteHeartedCat(cat);
-                    gridLiked.getChildren().remove(pets.indexOf(cat));
-                    pets.remove(cat);
-
+                public void onClickListener(PetDAO pet) {
+                    deleteLikedPet(pet);
+                    gridLiked.getChildren().remove(pets.indexOf(pet));
+                    pets.remove(pet);
                 }
                 @Override
                 public void onClickListener(User user) {}

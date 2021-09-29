@@ -1,19 +1,19 @@
 
-\
-java:S1128"?Remove this unused import 'java.time.format.DateTimeFormatter'.(‰÷÷ª8­„óøÀ/
-V
-java:S1128"4Remove this unused import 'ba.unsa.etf.PrintReport'.(ÆúëËùÿÿÿÿ8Èí·ıÀ/
-v
-java:S1450$"YRemove the "pickedDate" field and declare it as a local variable in the relevant methods.(€¿íù8¹ß†ÀÁ/
-t
-java:S1450"RRemove the "cat" field and declare it as a local variable in the relevant methods.(Ô’Úšüÿÿÿÿ8­„óøÀ/
 p
 java:S1450'"SRemove the "mail" field and declare it as a local variable in the relevant methods.(…›ˆÌ8êÿÀÁ/
 U
 java:S1128"8Remove this unused import 'javafx.util.StringConverter'.(ûóŠ×8­„óøÀ/
+\
+java:S1128"?Remove this unused import 'java.time.format.DateTimeFormatter'.(‰÷÷ª8­„óøÀ/
 o
 java:S1450"RRemove the "dog" field and declare it as a local variable in the relevant methods.(œ´ÿå8­„óøÀ/
-f
-java:S1128"DRemove this unused import 'net.sf.jasperreports.engine.JRException'.(¥Ã—ôûÿÿÿÿ8Èí·ıÀ/
 Z
 java:S1128"8Remove this unused import 'javafx.scene.control.Button'.(Ë Í‹øÿÿÿÿ8úã®ÉÁ/
+f
+java:S1128"DRemove this unused import 'net.sf.jasperreports.engine.JRException'.(¥Ã—ôûÿÿÿÿ8Èí·ıÀ/
+V
+java:S1128"4Remove this unused import 'ba.unsa.etf.PrintReport'.(ÆúëËùÿÿÿÿ8Èí·ıÀ/
+t
+java:S1450"RRemove the "cat" field and declare it as a local variable in the relevant methods.(Ô’Úšüÿÿÿÿ8­„óøÀ/
+v
+java:S1450$"YRemove the "pickedDate" field and declare it as a local variable in the relevant methods.(€¿íù8¹ß†ÀÁ/

@@ -1,0 +1,51 @@
+
+j
+java:S2095¨"GUse try-with-resources or close this "Statement" in a "finally" clause.(íñéşÿÿÿÿ8œúÇŸÂ/
+?
+java:S1643¥"Use a StringBuilder instead.(¸±™şÿÿÿÿ8œúÇŸÂ/
+M
+java:S1659"+Declare "getNewIdLiked" on a separate line.(Ê…™‡üÿÿÿÿ8ß¼‰ Â/
+M
+java:S1659"0Declare "deletePetStatement" on a separate line.(¯‹ñ—8İæŒ Â/
+Y
+java:S1659"7Declare "getUnadoptedDogsStatement" on a separate line.(Ê…™‡üÿÿÿÿ8÷ˆ Â/
+R
+java:S1659"5Declare "updateAdoptionStatement" on a separate line.(¯‹ñ—8û† Â/
+
+java:S1319˜"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ß¶……8•ê’ Â/
+R
+java:S1659"5Declare "deleteLikedPetStatement" on a separate line.(¯‹ñ—8ÆÆŒ Â/
+R
+java:S2695É"/This "PreparedStatement" only has 3 parameters.(Âñ‡Âıÿÿÿÿ8å™Ğ Â/
+“
+java:S1319ƒ"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(Î˜ÅËşÿÿÿÿ8œúÇŸÂ/
+
+java:S1319p"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(¬ê–Ô8÷½‘ Â/
+X
+java:S1141§"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8œúÇŸÂ/
+U
+java:S1659"3Declare "getLikedPetsStatement" on a separate line.(Ê…™‡üÿÿÿÿ8Ş‰ Â/
+
+java:S1319]"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(“’ŠÁ8œúÇŸÂ/
+K
+java:S1659".Declare "getPetsStatement" on a separate line.(¯‹ñ—8½çÃ Â/
+M
+java:S1659"0Declare "insertPetStatement" on a separate line.(¯‹ñ—8ÆÆŒ Â/
+
+java:S1319­"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(¸–ò¦8œúÇŸÂ/
+P
+java:S1659"3Declare "updateUrgentStatement" on a separate line.(¯‹ñ—8ù© Â/
+K
+java:S1659".Declare "getCatsStatement" on a separate line.(¯‹ñ—8‹Õ Â/
+j
+java:S2095¸"GUse try-with-resources or close this "Statement" in a "finally" clause.(íñéşÿÿÿÿ8œúÇŸÂ/
+T
+java:S1659"7Declare "getUnadoptedCatsStatement" on a separate line.(¯‹ñ—8† Â/
+W
+java:S1659"5Declare "insertLikedPetStatement" on a separate line.(Ê…™‡üÿÿÿÿ8Òÿ‰ Â/
+H
+java:S1659"&Declare "getNewId" on a separate line.(Ê…™‡üÿÿÿÿ8òÜ‰ Â/
+]
+java:S4034¶":Replace this negation and "anyMatch()" with "noneMatch()".(Û˜”¹øÿÿÿÿ8²ÂàŸÂ/
+’
+java:S1319J"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(¾ñú·øÿÿÿÿ8‡ÛÁ Â/

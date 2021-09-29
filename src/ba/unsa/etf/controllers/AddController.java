@@ -1,7 +1,6 @@
 package ba.unsa.etf.controllers;
 
-import ba.unsa.etf.dal.CatDAO;
-import ba.unsa.etf.dal.DogDAO;
+import ba.unsa.etf.dal.PetDAO;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -12,14 +11,13 @@ import java.io.IOException;
 
 public class AddController {
 
-    private DogDAO dog = DogDAO.getInstance();
-    private CatDAO cat = CatDAO.getInstance();
+    private PetDAO pet = PetDAO.getInstance();
 
     public void dogsAdd(ActionEvent actionEvent) {
         try {
             Stage newStage = new Stage();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/addpetscreen.fxml"));
-            loader.setController(new AddFormContoller(dog));
+            loader.setController(new AddFormContoller(pet));
             Parent root = loader.load();
             newStage.setTitle("Add a dog");
             newStage.setScene(new Scene(root, 300, 350));
@@ -34,7 +32,7 @@ public class AddController {
         try {
             Stage newStage = new Stage();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/addpetscreen.fxml"));
-            loader.setController(new AddFormContoller(cat));
+            loader.setController(new AddFormContoller(pet));
             Parent root = loader.load();
             newStage.setTitle("Add a cat");
             newStage.setScene(new Scene(root, 300, 350));

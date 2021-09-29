@@ -1,8 +1,7 @@
 package ba.unsa.etf.controllers;
 
-import ba.unsa.etf.dal.CatDAO;
-import ba.unsa.etf.dal.DogDAO;
 import ba.unsa.etf.dal.Pet;
+import ba.unsa.etf.dal.PetDAO;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -44,27 +43,25 @@ public class AddFormContoller implements Initializable {
     @FXML
     private Label infoLabel;
 
-    private CatDAO cat;
-    private DogDAO dog;
+    private PetDAO pet;
 
 
     public AddFormContoller(Pet p) {
-        if (p instanceof DogDAO) dog = DogDAO.getInstance();
-        if (p instanceof CatDAO) cat = CatDAO.getInstance();
+        pet = PetDAO.getInstance();
 
     }
 
     public void addAction(ActionEvent actionEvent) {
 
         if (addImageField.getText().length() > 0 && addBreedField.getText().length() > 0 && addNameField.getText().length() > 0) {
-            if (dog!=null) {
-                DogDAO newDog = new DogDAO(0,nameProperty.get(), sexInterpretation(addSexChoice), addAgeSpinner.getValue().toString(), breedProperty.get(), imageProperty.get(), addDedicationSpinner.getValue(), choiceInterpretation(addPeopleChoice), choiceInterpretation(addYardChoice), choiceInterpretation(addPetsChoice), 0, 0);
-                dog.insertDog(newDog);
+            if (pet!=null && pet.isPetDog(pet.getId())) {
+                PetDAO newDog = new PetDAO(0,nameProperty.get(), sexInterpretation(addSexChoice), addAgeSpinner.getValue().toString(), breedProperty.get(), imageProperty.get(), addDedicationSpinner.getValue(), choiceInterpretation(addPeopleChoice), choiceInterpretation(addYardChoice), choiceInterpretation(addPetsChoice), 0, 0, "dog");
+                pet.insertDog(newDog);
                 infoLabel.setText("The new dog is added");
             }
-            else if (cat!=null) {
-                CatDAO newCat = new CatDAO(0,nameProperty.get(), sexInterpretation(addSexChoice), addAgeSpinner.getValue().toString(), breedProperty.get(), imageProperty.get(), addDedicationSpinner.getValue(), choiceInterpretation(addPeopleChoice), choiceInterpretation(addYardChoice), choiceInterpretation(addPetsChoice), 0, 0);
-                cat.insertCat(newCat);
+            else if (pet!=null && pet.isPetCat(pet.getId())) {
+                PetDAO newCat = new PetDAO(0,nameProperty.get(), sexInterpretation(addSexChoice), addAgeSpinner.getValue().toString(), breedProperty.get(), imageProperty.get(), addDedicationSpinner.getValue(), choiceInterpretation(addPeopleChoice), choiceInterpretation(addYardChoice), choiceInterpretation(addPetsChoice), 0, 0, "cat");
+                pet.insertCat(newCat);
                 infoLabel.setText("The new cat is added");
             }
         }

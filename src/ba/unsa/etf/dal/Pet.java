@@ -13,8 +13,9 @@ public class Pet {
     private int petTolerance;
     private int adopted;
     private int urgent;
+    private String type;
 
-    public Pet(int id,String name, String sex, String age, String breed, String imgSrc, double dedicationHours, int peopleTolerance, int yardNeed, int petTolerance, int adopted, int urgent) {
+    public Pet(int id,String name, String sex, String age, String breed, String imgSrc, double dedicationHours, int peopleTolerance, int yardNeed, int petTolerance, int adopted, int urgent, String type) {
         this.id = id;
         this.name = name;
         this.sex = sex;
@@ -27,6 +28,7 @@ public class Pet {
         this.petTolerance = petTolerance;
         this.adopted = adopted;
         this.urgent = urgent;
+        this.type = type;
     }
 
     protected Pet() {

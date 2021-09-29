@@ -2,7 +2,6 @@ package ba.unsa.etf.controllers;
 
 import ba.unsa.etf.ItemButtonListener;
 import ba.unsa.etf.dal.*;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -47,9 +46,7 @@ public class UsersController implements Initializable {
                     users.remove(u);
                 }
                 @Override
-                public void onClickListener(CatDAO cat) {}
-                @Override
-                public void onClickListener(DogDAO dog) {}
+                public void onClickListener(PetDAO dog) {}
             };
         }
 

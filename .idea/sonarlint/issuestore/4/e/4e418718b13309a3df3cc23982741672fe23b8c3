@@ -1,13 +1,13 @@
 
+R
+java:S2209'"5Change this instance-reference to a static reference.(ÌÖÛ®8¶˜³ÉÁ/
 u
-java:S1104"SMake nameCol a static final constant or non-public and provide accessors if needed.(àÔ‹®ûÿÿÿÿ8‚„¸ıÀ/
-L
-java:S3740"/Provide the parametrized type for this generic.(ùÌâ‰8İúºıÀ/
+java:S1104"SMake dateCol a static final constant or non-public and provide accessors if needed.(Ï×ìøÿÿÿÿ8‚„¸ıÀ/
 T
 java:S1172%"2Remove this unused method parameter "actionEvent".(…Î·ÿÿÿÿÿ8İúºıÀ/
 u
-java:S1104"SMake dateCol a static final constant or non-public and provide accessors if needed.(Ï×ìøÿÿÿÿ8‚„¸ıÀ/
+java:S1104"SMake nameCol a static final constant or non-public and provide accessors if needed.(àÔ‹®ûÿÿÿÿ8‚„¸ıÀ/
 Q
 java:S3740"/Provide the parametrized type for this generic.(®ÈÜ½ûÿÿÿÿ8İúºıÀ/
-R
-java:S2209'"5Change this instance-reference to a static reference.(ÌÖÛ®8¶˜³ÉÁ/
+L
+java:S3740"/Provide the parametrized type for this generic.(ùÌâ‰8İúºıÀ/

@@ -1,30 +1,23 @@
 package ba.unsa.etf.controllers;
 
 import ba.unsa.etf.NoLikedException;
-import ba.unsa.etf.PrintReport;
 import ba.unsa.etf.SendMail;
-import ba.unsa.etf.dal.CatDAO;
-import ba.unsa.etf.dal.DogDAO;
+import ba.unsa.etf.dal.PetDAO;
 import ba.unsa.etf.dal.UserDAO;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
-import javafx.util.StringConverter;
-import net.sf.jasperreports.engine.JRException;
 
 import java.net.URL;
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.ResourceBundle;
 
 public class ProgressController implements Initializable {
 
-    private DogDAO dog;
-    private CatDAO cat;
+    private PetDAO pet;
     private UserDAO user;
 
     @FXML
@@ -49,8 +42,7 @@ public class ProgressController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        dog = DogDAO.getInstance();
-        cat = CatDAO.getInstance();
+        pet = PetDAO.getInstance();
         user = UserDAO.getInstance();
         if (user.getApproved(user.getCurrentUser().getUsername())==1) {
             firstLabel.setText("You have been approved. Please choose the date to visit us and meet the desired pets");
@@ -60,7 +52,7 @@ public class ProgressController implements Initializable {
         }
 
         try {
-            if (dog.getLikedDogs().isEmpty() && cat.getLikedCats().isEmpty()) {
+            if (pet.getLikedPets().isEmpty()) {
                 appointmentDate.setDisable(true);
                 throw new NoLikedException("You don't have any liked pets");
             }

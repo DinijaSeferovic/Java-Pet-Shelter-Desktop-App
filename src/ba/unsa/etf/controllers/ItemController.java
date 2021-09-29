@@ -80,16 +80,14 @@ public class ItemController {
     private Button deleteButton;
 
 
-    private DogDAO dog;
-    private CatDAO cat;
+    private PetDAO pet = PetDAO.getInstance();
     private UserDAO userDao = UserDAO.getInstance();
     private User user;
     private ItemButtonListener myListener;
 
     @FXML
     public void clickHeart(MouseEvent mouseEvent) {
-        if (dog!=null) myListener.onClickListener(dog);
-        else if (cat!=null) myListener.onClickListener(cat);
+        if (pet!=null) myListener.onClickListener(pet);
         Image heart=new Image("/img/fulllikeicon.png");
         ImageView iv=new ImageView(heart);
         iv.setFitHeight(30);
@@ -99,8 +97,7 @@ public class ItemController {
 
     @FXML
     public void unclickHeart(MouseEvent mouseEvent) {
-        if (dog!=null) myListener.onClickListener(dog);
-        else if (cat!=null) myListener.onClickListener(cat);
+        if (pet!=null) myListener.onClickListener(pet);
     }
 
     @FXML
@@ -110,57 +107,37 @@ public class ItemController {
 
     @FXML
     public void adoptedClick(MouseEvent mouseEvent) {
-        if (dog!=null) {
-            DogDAO selectedDog = DogDAO.getInstance();
-            selectedDog.setAdopted(dog);
+        if (pet!=null) {
+            PetDAO selectedPet = PetDAO.getInstance();
+            selectedPet.setAdopted(pet);
         }
-        else if (cat!=null)  {
-            CatDAO selectedCat = CatDAO.getInstance();
-            selectedCat.setAdopted(cat);
-        }
+
         adoptionLabel.setText("Adoption status: Adopted");
     }
 
     @FXML
     public void urgentClick(MouseEvent mouseEvent) {
-        if (dog!=null) {
-            DogDAO selectedDog = DogDAO.getInstance();
-            selectedDog.setUrgent(dog);
-        }
-        else if (cat!=null)  {
-            CatDAO selectedCat = CatDAO.getInstance();
-            selectedCat.setUrgent(cat);
+        if (pet!=null) {
+            PetDAO selectedPet = PetDAO.getInstance();
+            selectedPet.setUrgent(pet);
         }
         adoptionLabel.setText(adoptionLabel.getText()+" (urgent)");
     }
 
-    public void setDogData(DogDAO dog, ItemButtonListener myListener) {
-        this.dog = dog;
+    public void setAllPetsData(PetDAO pet, ItemButtonListener myListener) {
+        this.pet = pet;
         this.myListener = myListener;
-        nameLabel.setText(dog.getName());
-        sexLabel.setText("Sex: " + dog.getSex());
-        ageLabel.setText("Age: " + dog.getAge());
-        breedLabel.setText("Breed: " + dog.getBreed());
-        Image image = new Image(getClass().getResourceAsStream(dog.getImgSrc()));
+        nameLabel.setText(pet.getName());
+        sexLabel.setText("Sex: " + pet.getSex());
+        ageLabel.setText("Age: " + pet.getAge());
+        breedLabel.setText("Breed: " + pet.getBreed());
+        Image image = new Image(getClass().getResourceAsStream(pet.getImgSrc()));
         img.setImage(image);
-        if (dog.getUrgent()==1) urgentLabel.setText("URGENT");
+        if (pet.getUrgent()==1) urgentLabel.setText("URGENT");
     }
 
-    public void setCatData(CatDAO cat, ItemButtonListener myListener) {
-        this.cat = cat;
-        this.myListener = myListener;
-        nameLabel.setText(cat.getName());
-        sexLabel.setText("Sex: " + cat.getSex());
-        ageLabel.setText("Age: " + cat.getAge());
-        breedLabel.setText("Breed: " + cat.getBreed());
-        Image image = new Image(getClass().getResourceAsStream(cat.getImgSrc()));
-        img.setImage(image);
-        if (cat.getUrgent()==1) urgentLabel.setText("URGENT");
-    }
-
-    public void setPetData(Pet pet, ItemButtonListener myListener) {
-        if (pet instanceof DogDAO) dog = (DogDAO) pet;
-        else if (pet instanceof CatDAO) cat = (CatDAO) pet;
+    public void setPetData(PetDAO pet, ItemButtonListener myListener) {
+        this.pet = pet;
         this.myListener = myListener;
         nameLabel.setText(pet.getName());
         sexLabel.setText("Sex: " + pet.getSex());
@@ -185,16 +162,13 @@ public class ItemController {
         if (pet.getUrgent()==1) adoptionLabel.setText(adoptionLabel.getText()+ " (urgent)");
 
         if (userDao.getCurrentUser()!=null) {
-            adviceLabel.setText(calculateAdvice(dog,cat));
+            adviceLabel.setText(calculateAdvice(pet));
         }
     }
 
-    private String calculateAdvice(DogDAO dog, CatDAO cat) {
-        if (dog!=null) {
-            return petAdvice(dog);
-        }
-        if (cat!=null) {
-            return petAdvice(cat);
+    private String calculateAdvice(PetDAO pet) {
+        if (pet!=null) {
+            return petAdvice(pet);
         }
         return "";
     }

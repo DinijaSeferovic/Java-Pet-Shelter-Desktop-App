@@ -1,8 +1,8 @@
 
-s
-java:S1104"QMake users a static final constant or non-public and provide accessors if needed.(¦‘•ûÿÿÿÿ8Öì™Á/
-^	java:S107"BConstructor has 13 parameters, which is greater than 7 authorized.(”âòò8×ê°õÀ/
-L
-java:S37409"/Provide the parametrized type for this generic.(ÎİÅ›8×ê°õÀ/
 0
 java:S1700"Rename field "user"(Ğ÷şã8×ê°õÀ/
+L
+java:S37409"/Provide the parametrized type for this generic.(ÎİÅ›8×ê°õÀ/
+^	java:S107"BConstructor has 13 parameters, which is greater than 7 authorized.(”âòò8×ê°õÀ/
+s
+java:S1104"QMake users a static final constant or non-public and provide accessors if needed.(¦‘•ûÿÿÿÿ8Öì™Á/

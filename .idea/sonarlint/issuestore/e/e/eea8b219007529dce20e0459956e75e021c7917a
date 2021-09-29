@@ -1,6 +1,6 @@
 
 w
 java:S1450"ZRemove the "mimeMessage" field and declare it as a local variable in the relevant methods.(¤›Øº8å©æ¿Á/
+U	java:S1069"9Replace this use of System.out or System.err by a logger.(ó’µë8å©æ¿Á/
 v
 java:S1450"YRemove the "newSession" field and declare it as a local variable in the relevant methods.(Ø¢ê“8å©æ¿Á/
-U	java:S1069"9Replace this use of System.out or System.err by a logger.(ó’µë8å©æ¿Á/

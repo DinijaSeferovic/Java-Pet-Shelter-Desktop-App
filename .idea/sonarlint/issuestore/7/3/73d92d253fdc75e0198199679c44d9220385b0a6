@@ -1,19 +1,19 @@
 
-i
-java:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(íñéşÿÿÿÿ8­·‹ñÀ/
-W
-java:S1141n"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8­·‹ñÀ/
-T
-java:S1659"2Declare "getPasswordStatement" on a separate line.(åÜö´ÿÿÿÿÿ8­·‹ñÀ/
 N
 java:S1068",Remove this unused "getNewId" private field.(åÜö´ÿÿÿÿÿ8­·‹ñÀ/
-U
-java:S1659"3Declare "getAllAdminsStatement" on a separate line.(åÜö´ÿÿÿÿÿ8­·‹ñÀ/
-’
-java:S1319,"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ˆí°Òùÿÿÿÿ8­·‹ñÀ/
-^
-java:S1126="AReplace this if-then-else statement by a single return statement.(ùõİï8­·‹ñÀ/
->
-java:S1643l"Use a StringBuilder instead.(¸±™şÿÿÿÿ8­·‹ñÀ/
+W
+java:S1141n"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8­·‹ñÀ/
+i
+java:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(íñéşÿÿÿÿ8­·‹ñÀ/
 i
 java:S2095o"GUse try-with-resources or close this "Statement" in a "finally" clause.(íñéşÿÿÿÿ8­·‹ñÀ/
+>
+java:S1643l"Use a StringBuilder instead.(¸±™şÿÿÿÿ8­·‹ñÀ/
+’
+java:S1319,"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ˆí°Òùÿÿÿÿ8­·‹ñÀ/
+U
+java:S1659"3Declare "getAllAdminsStatement" on a separate line.(åÜö´ÿÿÿÿÿ8­·‹ñÀ/
+T
+java:S1659"2Declare "getPasswordStatement" on a separate line.(åÜö´ÿÿÿÿÿ8­·‹ñÀ/
+^
+java:S1126="AReplace this if-then-else statement by a single return statement.(ùõİï8­·‹ñÀ/

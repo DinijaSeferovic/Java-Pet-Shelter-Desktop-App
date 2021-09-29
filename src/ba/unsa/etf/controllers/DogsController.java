@@ -1,8 +1,7 @@
 package ba.unsa.etf.controllers;
 
 import ba.unsa.etf.ItemButtonListener;
-import ba.unsa.etf.dal.CatDAO;
-import ba.unsa.etf.dal.DogDAO;
+import ba.unsa.etf.dal.PetDAO;
 import ba.unsa.etf.dal.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -23,7 +22,7 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 public class DogsController implements Initializable {
-    private DogDAO dao = DogDAO.getInstance();
+    private PetDAO dao = PetDAO.getInstance();
 
     @FXML
     private ScrollPane scrollDogs;
@@ -34,11 +33,11 @@ public class DogsController implements Initializable {
     @FXML
     private GridPane mainGridDogs;
 
-    private List<DogDAO> dogs = new ArrayList<>();
+    private List<PetDAO> dogs = new ArrayList<>();
     private ItemButtonListener myListener;
 
-    private void setHeartedDog(DogDAO dog) {
-        dao.insertLikedDog(dogs.stream().filter(d -> d.getId()==dog.getId()).findFirst().get());
+    private void setLikedDog(PetDAO dog) {
+        dao.insertLikedPet(dogs.stream().filter(d -> d.getId()==dog.getId()).findFirst().get());
     }
 
     @Override
@@ -49,11 +48,9 @@ public class DogsController implements Initializable {
         if (dogs.size() > 0) {
             myListener = new ItemButtonListener() {
                 @Override
-                public void onClickListener(DogDAO dog) {
-                    setHeartedDog(dog);
+                public void onClickListener(PetDAO dog) {
+                    setLikedDog(dog);
                 }
-                @Override
-                public void onClickListener(CatDAO cat) {}
                 @Override
                 public void onClickListener(User user) {}
             };
@@ -68,7 +65,7 @@ public class DogsController implements Initializable {
                 AnchorPane Pane = fxmlLoader.load();
 
                 ItemController itemController = fxmlLoader.getController();
-                itemController.setDogData(dogs.get(i), myListener);
+                itemController.setAllPetsData(dogs.get(i), myListener);
 
                 if (column == 3) {
                     column = 0;

@@ -1,15 +1,9 @@
 
-M
-java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8ó¿öÀ/
-d
-java:S1192‘"FDefine a constant instead of duplicating this literal "Age: " 3 times.(Œ¯üò8«ù½Ø¼/
 i
-java:S1192"FDefine a constant instead of duplicating this literal "Sex: " 3 times.(ª–¶øÿÿÿÿ8«ù½Ø¼/
-N
-java:S1128"1Remove this unused import 'ba.unsa.etf.SendMail'.(ãŸÎÓ8ÏÙù¿Á/
-k
-java:S1192’"HDefine a constant instead of duplicating this literal "Breed: " 3 times.(˜£Éÿÿÿÿÿ8«ù½Ø¼/
-W
-java:S1128":Remove this unused import 'javax.mail.MessagingException'.(ÇîŞ8İÀÁ/
+java:S1192"FDefine a constant instead of duplicating this literal "Sex: " 3 times.(ª–¶øÿÿÿÿ8«ù½Ø¼/
+d
+java:S1192"FDefine a constant instead of duplicating this literal "Age: " 3 times.(Œ¯üò8«ù½Ø¼/
 f
-java:S1858ü"H"getAppointment" returns a string, there's no need to call "toString()".(‚ä²â8ÑğÎ“Á/
+java:S1858ù"H"getAppointment" returns a string, there's no need to call "toString()".(‚ä²â8ÑğÎ“Á/
+k
+java:S1192"HDefine a constant instead of duplicating this literal "Breed: " 3 times.(˜£Éÿÿÿÿÿ8«ù½Ø¼/

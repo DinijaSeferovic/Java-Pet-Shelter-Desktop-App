@@ -1,9 +1,8 @@
 package ba.unsa.etf.controllers;
 
 import ba.unsa.etf.ItemButtonListener;
-import ba.unsa.etf.dal.CatDAO;
-import ba.unsa.etf.dal.DogDAO;
 import ba.unsa.etf.dal.Pet;
+import ba.unsa.etf.dal.PetDAO;
 import ba.unsa.etf.dal.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -24,8 +23,7 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 public class BothController implements Initializable {
-    private CatDAO cat = CatDAO.getInstance();
-    private DogDAO dog = DogDAO.getInstance();
+    private PetDAO pet = PetDAO.getInstance();
 
     @FXML
     private ScrollPane scrollBoth;
@@ -36,34 +34,23 @@ public class BothController implements Initializable {
     @FXML
     private GridPane mainGridBoth;
 
-    private List<Pet> pets = new ArrayList<>();
+    private List<PetDAO> pets = new ArrayList<>();
     private ItemButtonListener myListener;
 
-    private void setHeartedPet(Pet pet) {
-        if (pet instanceof DogDAO) {
-            dog.insertLikedDog((DogDAO) pets.stream().filter(d -> d.getId()==pet.getId()).findFirst().get());
-        }
-        if (pet instanceof CatDAO) {
-            cat.insertLikedCat((CatDAO) pets.stream().filter(d -> d.getId()==pet.getId()).findFirst().get());
-        }
-
+    private void setHeartedPet(Pet p) {
+        pet.insertLikedPet((PetDAO) pets.stream().filter(d -> d.getId()==pet.getId()).findFirst().get());
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources)  {
 
-        pets.addAll(dog.getAllDogs());
-        pets.addAll(cat.getAllCats());
+        pets.addAll(pet.getAllPets());
 
         if (pets.size() > 0) {
             myListener = new ItemButtonListener() {
                 @Override
-                public void onClickListener(DogDAO dog) {
-                    setHeartedPet(dog);
-                }
-                @Override
-                public void onClickListener(CatDAO cat) {
-                    setHeartedPet(cat);
+                public void onClickListener(PetDAO pet) {
+                    setHeartedPet(pet);
                 }
                 @Override
                 public void onClickListener(User user) {}
@@ -79,13 +66,7 @@ public class BothController implements Initializable {
                 AnchorPane Pane = fxmlLoader.load();
 
                 ItemController itemController = fxmlLoader.getController();
-                if (pets.get(i) instanceof CatDAO) {
-                    itemController.setCatData((CatDAO) pets.get(i), myListener);
-                }
-                else if (pets.get(i) instanceof DogDAO) {
-                    itemController.setDogData((DogDAO) pets.get(i), myListener);
-                }
-
+                itemController.setAllPetsData(pets.get(i), myListener);
 
                 if (column == 3) {
                     column = 0;

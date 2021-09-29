@@ -1,9 +1,9 @@
 
 }
 java:S1488"[Immediately return this expression instead of assigning it to the temporary variable "con".(ñ¬±şÿÿÿÿ8šà÷À/
-Y
-java:S1854"7Remove this useless assignment to local variable "url".(Ã×µ÷üÿÿÿÿ8šà÷À/
 K
 java:S2115")Add password protection to this database.(ñ¬±şÿÿÿÿ8šà÷À/
 J
-java:S1481"(Remove this unused "url" local variable.(Ã×µ÷üÿÿÿÿ8šà÷À/
+java:S1481"(Remove this unused "url" local variable.(×…˜ıÿÿÿÿ8šà÷À/
+Y
+java:S1854"7Remove this useless assignment to local variable "url".(×…˜ıÿÿÿÿ8šà÷À/

@@ -1,19 +1,19 @@
 
-d
-java:S1126˜"AReplace this if-then-else statement by a single return statement.(Ìº¯éÿÿÿÿÿ8ÍóáòÀ/
-L
-java:S1125ü")Remove the literal "false" boolean value.(–ï¨ÿÿÿÿÿ8ÍóáòÀ/
-Y
-java:S1874†"6Remove this use of "EmailValidator"; it is deprecated.(¹”Çúÿÿÿÿ8ÍóáòÀ/
-m
-java:S1192y"KDefine a constant instead of duplicating this literal "fieldValid" 6 times.(„ÚÀûÿÿÿÿ8ÍóáòÀ/
-Y
-java:S1874†"6Remove this use of "EmailValidator"; it is deprecated.(¹”Çúÿÿÿÿ8ÍóáòÀ/
-F
-java:S1604ƒ"(Make this anonymous inner class a lambda(÷ü‘ü8ÍóáòÀ/
-k
-java:S1192x"NDefine a constant instead of duplicating this literal "fieldNotValid" 6 times.(•õí»8ÍóáòÀ/
 J
 java:S1604t"(Make this anonymous inner class a lambda(åš²úÿÿÿÿ8ÍóáòÀ/
+k
+java:S1192x"NDefine a constant instead of duplicating this literal "fieldNotValid" 6 times.(•õí»8ÍóáòÀ/
+Y
+java:S1874†"6Remove this use of "EmailValidator"; it is deprecated.(¹”Çúÿÿÿÿ8ÍóáòÀ/
+Y
+java:S1874†"6Remove this use of "EmailValidator"; it is deprecated.(¹”Çúÿÿÿÿ8ÍóáòÀ/
+L
+java:S1125ü")Remove the literal "false" boolean value.(–ï¨ÿÿÿÿÿ8ÍóáòÀ/
+m
+java:S1192y"KDefine a constant instead of duplicating this literal "fieldValid" 6 times.(„ÚÀûÿÿÿÿ8ÍóáòÀ/
+F
+java:S1604ƒ"(Make this anonymous inner class a lambda(÷ü‘ü8ÍóáòÀ/
+d
+java:S1126˜"AReplace this if-then-else statement by a single return statement.(Ìº¯éÿÿÿÿÿ8ÍóáòÀ/
 _
 java:S1126"AReplace this if-then-else statement by a single return statement.(ë°ø‘8ÍóáòÀ/

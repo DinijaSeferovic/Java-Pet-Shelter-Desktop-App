@@ -1,10 +1,10 @@
 
-r	java:S117O"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ãÄžñÿÿÿÿÿ8ÊŽÉÚ½/
 ž
 java:S1186E"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‘Ò’€8èË´ŸÀ/
-[
-java:S1155:">Use isEmpty() to check whether the collection is empty or not.(úƒŒ™8ñ°ÑÚ½/
-T
-java:S3655/"7Call "Optional#isPresent()" before accessing the value.(Š’ºØ8ŠðÎÚ½/
 Y
 java:S3655,"7Call "Optional#isPresent()" before accessing the value.(÷²ÊÃýÿÿÿÿ8ƒÂÌÚ½/
+[
+java:S1155:">Use isEmpty() to check whether the collection is empty or not.(úƒŒ™8ñ°ÑÚ½/
+r	java:S117O"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ãÄžñÿÿÿÿÿ8ÊŽÉÚ½/
+T
+java:S3655/"7Call "Optional#isPresent()" before accessing the value.(Š’ºØ8ŠðÎÚ½/
