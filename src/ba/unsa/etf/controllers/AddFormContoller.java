@@ -44,22 +44,24 @@ public class AddFormContoller implements Initializable {
     private Label infoLabel;
 
     private PetDAO pet;
+    private String type;
 
 
-    public AddFormContoller(Pet p) {
+    public AddFormContoller(String type) {
         pet = PetDAO.getInstance();
+        this.type = type;
 
     }
 
     public void addAction(ActionEvent actionEvent) {
 
         if (addImageField.getText().length() > 0 && addBreedField.getText().length() > 0 && addNameField.getText().length() > 0) {
-            if (pet!=null && pet.isPetDog(pet.getId())) {
+            if (pet!=null && type.equals("dog")) {
                 PetDAO newDog = new PetDAO(0,nameProperty.get(), sexInterpretation(addSexChoice), addAgeSpinner.getValue().toString(), breedProperty.get(), imageProperty.get(), addDedicationSpinner.getValue(), choiceInterpretation(addPeopleChoice), choiceInterpretation(addYardChoice), choiceInterpretation(addPetsChoice), 0, 0, "dog");
                 pet.insertDog(newDog);
                 infoLabel.setText("The new dog is added");
             }
-            else if (pet!=null && pet.isPetCat(pet.getId())) {
+            else if (pet!=null && type.equals("dog")) {
                 PetDAO newCat = new PetDAO(0,nameProperty.get(), sexInterpretation(addSexChoice), addAgeSpinner.getValue().toString(), breedProperty.get(), imageProperty.get(), addDedicationSpinner.getValue(), choiceInterpretation(addPeopleChoice), choiceInterpretation(addYardChoice), choiceInterpretation(addPetsChoice), 0, 0, "cat");
                 pet.insertCat(newCat);
                 infoLabel.setText("The new cat is added");

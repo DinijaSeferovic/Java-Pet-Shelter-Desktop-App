@@ -73,8 +73,6 @@ P
  resources/fxml/addpetscreen.fxml,0\d\0db0a611c624836bc8df8dcb86678152903fd685
 q
 Aout/production/rpr20-projekat-DinijaSeferovic/fxml/addscreen.fxml,5\5\55dbe48cc2955d75663a49c43c52ea52374000e5
-M
-resources/fxml/addscreen.fxml,5\9\59b7189380c4b6d7030fad940fe9fe18349b3165
 w
 Gout/production/rpr20-projekat-DinijaSeferovic/fxml/admincatsscreen.fxml,6\5\65e9e11bc0230364a515f66b21b1935c7e94a449
 S

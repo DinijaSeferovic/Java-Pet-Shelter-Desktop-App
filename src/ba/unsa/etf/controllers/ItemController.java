@@ -131,8 +131,19 @@ public class ItemController {
         sexLabel.setText("Sex: " + pet.getSex());
         ageLabel.setText("Age: " + pet.getAge());
         breedLabel.setText("Breed: " + pet.getBreed());
-        Image image = new Image(getClass().getResourceAsStream(pet.getImgSrc()));
-        img.setImage(image);
+        if (getClass().getResourceAsStream(pet.getImgSrc())!=null) {
+            Image image = new Image(getClass().getResourceAsStream(pet.getImgSrc()));
+            img.setImage(image);
+        }
+        else {
+            try {
+                FileInputStream inputstream = new FileInputStream(pet.getImgSrc());
+                Image image = new Image(inputstream);
+                img.setImage(image);
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+        }
         if (pet.getUrgent()==1) urgentLabel.setText("URGENT");
     }
 

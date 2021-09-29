@@ -1,7 +1,6 @@
 package ba.unsa.etf.controllers;
 
 import ba.unsa.etf.ItemButtonListener;
-import ba.unsa.etf.dal.Pet;
 import ba.unsa.etf.dal.PetDAO;
 import ba.unsa.etf.dal.User;
 import javafx.event.ActionEvent;
@@ -37,8 +36,8 @@ public class BothController implements Initializable {
     private List<PetDAO> pets = new ArrayList<>();
     private ItemButtonListener myListener;
 
-    private void setHeartedPet(Pet p) {
-        pet.insertLikedPet((PetDAO) pets.stream().filter(d -> d.getId()==pet.getId()).findFirst().get());
+    private void setLikedPet(PetDAO p) {
+        pet.insertLikedPet(pets.stream().filter(d -> d.getId()==p.getId()).findFirst().get());
     }
 
     @Override
@@ -50,7 +49,7 @@ public class BothController implements Initializable {
             myListener = new ItemButtonListener() {
                 @Override
                 public void onClickListener(PetDAO pet) {
-                    setHeartedPet(pet);
+                    setLikedPet(pet);
                 }
                 @Override
                 public void onClickListener(User user) {}

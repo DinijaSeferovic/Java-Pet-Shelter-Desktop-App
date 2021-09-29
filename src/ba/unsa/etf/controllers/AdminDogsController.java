@@ -96,7 +96,7 @@ public class AdminDogsController implements Initializable {
         try {
             Stage newStage = new Stage();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/addpetscreen.fxml"));
-            loader.setController(new AddFormContoller(pet));
+            loader.setController(new AddFormContoller("dog"));
             Parent root = loader.load();
             newStage.setTitle("Add a dog");
             newStage.setScene(new Scene(root, 300, 350));
