@@ -2,4 +2,4 @@
 
 Click on the photo for a video preview
 
-[![Video Demo](https://i.pinimg.com/564x/ca/4a/f2/ca4af20b57850bdc75c69d7da3a1fc25.jpg)](https://youtu.be/P_0ozdXk6kg)
+[![Video Demo](https://i.pinimg.com/564x/e6/1d/36/e61d36fe58dfeb63255955fdbeac4c98.jpg)](https://youtu.be/P_0ozdXk6kg)
